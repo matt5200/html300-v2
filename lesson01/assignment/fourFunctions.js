@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function(){
     const result = data.map( x =>  x % userNumber);
 
     // Set inner html text to manipulated array
-    document.querySelector('#function-1 .output').innerHTML = ret.toString();
+    document.querySelector('#function-1 .output').innerHTML = result.toString();
 
     // Console log the manipualted array
     console.log(`Template literals make things so easy! Here is the result of the prior calculation ${result}`);
