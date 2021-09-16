@@ -55,7 +55,7 @@ document.addEventListener("DOMContentLoaded", function(){
     const result = data.filter( x =>  x > userNumber);
 
     // If array is empty set inner HTML to message, else set to array
-    if (data.length == 0) 
+    if (result.length == 0) 
     {
       document.querySelector('#function-2 .output').innerHTML = "List had no values greater than user input";
     }
@@ -86,8 +86,8 @@ document.addEventListener("DOMContentLoaded", function(){
     const userInput = inputField.value
     const userNumber = parseInt(userInput)
 
-    // Return array with each summed with user input
-    const result = data.map( x =>  x + userInput*1);
+    // Tests whether atleast one number in the array is divisible by user input
+    const result = data.some( x =>  x % userNumber === 0);
 
     // Set inner html to array
     document.querySelector('#function-3 .output').innerHTML = result;
@@ -96,6 +96,8 @@ document.addEventListener("DOMContentLoaded", function(){
     inputField.value = ''
   })
 })
+
+
 
 document.addEventListener("DOMContentLoaded", function(){
 
