@@ -57,7 +57,7 @@ document.addEventListener("DOMContentLoaded", function(){
     // If array is empty set inner HTML to message, else set to array
     if (result.length == 0) 
     {
-      document.querySelector('#function-2 .output').innerHTML = "List had no values greater than user input";
+      document.querySelector('#function-2 .output').innerHTML = "My array had no values greater than your input!";
     }
     else 
     {
@@ -98,7 +98,7 @@ document.addEventListener("DOMContentLoaded", function(){
 })
 
 
-
+// Code that requires the DOM be loaded should not be run until the DOM is loaded
 document.addEventListener("DOMContentLoaded", function(){
 
   // Find the example form, and handle its submit event
