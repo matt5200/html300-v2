@@ -9,3 +9,12 @@
   display: inline-block;
   font-size: 40px;
 }
+
+// Format header
+.header {
+  display: flex;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 60px;
+  justify-content: center;
+  align-items: center;
+}
