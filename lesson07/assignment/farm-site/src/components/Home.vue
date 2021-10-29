@@ -1,6 +1,8 @@
 <template>
-  <div id="app">
-   <main class="main">
+  <div class="hello">
+    <h1>{{ msg }}</h1>
+      <body>
+        <main class="main">
             <div class="container">
                 <!-- Header -->
                 <div class="row header">
@@ -12,7 +14,25 @@
                         <i class="fa fa-tractor"></i>
                     </div>
                 </div>
-               
+                <!-- Navbar -->
+                <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                    <div class="navbar">
+                    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</span></a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link" href="Blog.html">Blog</span></a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link" href="testimonials.html">Testimonials</a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                        </li>
+                    </ul>
+                    </div>
+                </nav>
                 <div class="row">
                     <!-- Create two rows in column -->
                     <div class="col mt-3">
@@ -47,40 +67,25 @@
                 </div>
             </div>
         </main>
-    <!-- <div id="nav">
-      <router-link to="/">Home</router-link>
-      <router-link to="/Blog">Blog</router-link>
-      <router-link to="/Testimonials">Testimonials</router-link>
-      <router-link to="/About">About</router-link>
-    </div> -->
-    <!-- <router-view/> -->
+    </body>
   </div>
 </template>
 
-<script>
-// import Home from './components/Home.vue'
-// import Blog from './components/Blog.vue'
-// import Testimonials from './components/Testimonials.vue'
-// import About from './components/About.vue'
 
-// export default {
-//   name: 'App',
-//   components: {
-//     Home,
-//     Blog,
-//     About,
-//     Testimonials
-//   }
-// }
-</script>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+<!-- Add "scoped" attribute to limit CSS to this component only -->
+<style scoped>
+h3 {
+  margin: 40px 0 0;
+}
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+li {
+  display: inline-block;
+  margin: 0 10px;
+}
+a {
+  color: #42b983;
 }
 </style>
