@@ -46,6 +46,13 @@ $fa-font-path: "~@fortawesome/fontawesome-free/webfonts";
 @import "~@fortawesome/fontawesome-free/scss/regular"; // far
 @import "~@fortawesome/fontawesome-free/scss/brands"; // fab
 
+@import "../scss/_base.normalize.scss";
+@import "../scss/_components.content.scss";
+@import "../scss/_settings.responsive.scss";
+@import "../scss/_settings.variables.scss";
+@import "../scss/style.scss";
+
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -66,4 +73,37 @@ $fa-font-path: "~@fortawesome/fontawesome-free/webfonts";
     }
   }
 }
+
+// Format tractor icon
+.fa-tractor {
+  display: inline-block;
+  font-size: 40px;
+}
+
+// Format header
+.header {
+  display: flex;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 60px;
+  justify-content: center;
+  align-items: center;
+  @include media-query("infograph") {
+    font-size: 25px;
+    .fa-tractor {
+      display: inline-block;
+      font-size: 20px;
+    }
+  }
+}
+
+.box-1 {
+  border-radius: 20px;
+}
+
+.box-2 {
+  border-radius: 20px;
+}
+
+
+
 </style>
