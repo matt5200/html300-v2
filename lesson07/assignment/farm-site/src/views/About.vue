@@ -68,3 +68,22 @@
     </div>
   </div>
 </template>
+
+
+<!-- Add "scoped" attribute to limit CSS to this component only -->
+<style lang="scss">
+
+$fa-font-path: "~@fortawesome/fontawesome-free/webfonts";
+@import "~@fortawesome/fontawesome-free/scss/fontawesome";
+@import "~@fortawesome/fontawesome-free/scss/solid"; // fas
+@import "~@fortawesome/fontawesome-free/scss/regular"; // far
+@import "~@fortawesome/fontawesome-free/scss/brands"; // fab
+
+@import "../../scss/_base.normalize.scss";
+@import "../../scss/_components.content.scss";
+@import "../../scss/_settings.responsive.scss";
+@import "../../scss/_settings.variables.scss";
+@import "../../scss/style.scss";
+
+
+</style>
