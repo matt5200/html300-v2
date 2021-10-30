@@ -15,16 +15,16 @@
         <div class="navbar">
           <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
               <li class="nav-item">
-              <router-link to="/">Home</router-link>
+                <router-link class="nav-link" to="/">Home</router-link>
+              </li>
+                <li class="nav-item">
+              <router-link class="nav-link" to="/Blog">Blog</router-link>
               </li>
               <li class="nav-item">
-              <router-link to="/Blog">Blog</router-link>
+                <router-link class="nav-link" to="/Testimonials">Testimonials</router-link>
               </li>
               <li class="nav-item">
-              <router-link to="/Testimonials">Testimonials</router-link>
-              </li>
-              <li class="nav-item">
-              <router-link to="/About">About</router-link>
+                <router-link class="nav-link" to="/About">About</router-link>
               </li>
             </ul>
           </div>
@@ -57,7 +57,6 @@ $fa-font-path: "~@fortawesome/fontawesome-free/webfonts";
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
   color: #2c3e50;
 }
 
