@@ -1,4 +1,4 @@
-<template>
+<template class="container">
   <div class="row">
       <!-- Create two rows in column -->
       <div class="col mt-3">
