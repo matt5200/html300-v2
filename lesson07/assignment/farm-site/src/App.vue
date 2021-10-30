@@ -1,86 +1,34 @@
 <template>
-  <div id="app">
-   <main class="main">
-            <div class="container">
-                <!-- Header -->
-                <div class="row header">
-                    <div class="col">
-                        <i class="fa fa-tractor"></i>
-                    </div>
-                    Blissful Farms
-                    <div class="col text-end">
-                        <i class="fa fa-tractor"></i>
-                    </div>
-                </div>
-               
-                <div class="row">
-                    <!-- Create two rows in column -->
-                    <div class="col mt-3">
-                        <div class="row box-1 bg-light m-3">
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                            </p>
-                        </div>
-                        <div class="row bg-light box-2 m-3">
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <!-- Create one row -->
-                        <div class="row m-3">
-                            <div class="row box-1 bg-light m-3">
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                                </p>
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Footer -->
-                    <div class="row bg-light text-center">
-                        © 2018 Blissful Farms, LLC | Seattle, WA
-                    </div>
-                </div>
-            </div>
-        </main>
-    <!-- <div id="nav">
-      <router-link to="/">Home</router-link>
-      <router-link to="/Blog">Blog</router-link>
-      <router-link to="/Testimonials">Testimonials</router-link>
-      <router-link to="/About">About</router-link>
-    </div> -->
-    <!-- <router-view/> -->
+<div>
+  <div id="nav">
+    <router-link to="/">Home</router-link> |
+    <router-link to="/Blog">Blog</router-link> |
+    <router-link to="/Testimonials">Testimonials</router-link> |
+    <router-link to="/About">About</router-link>
   </div>
+  <router-view/>
+</div>
 </template>
 
-<script>
-// import Home from './components/Home.vue'
-// import Blog from './components/Blog.vue'
-// import Testimonials from './components/Testimonials.vue'
-// import About from './components/About.vue'
-
-// export default {
-//   name: 'App',
-//   components: {
-//     Home,
-//     Blog,
-//     About,
-//     Testimonials
-//   }
-// }
-</script>
-
-<style>
+<style lang="scss">
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+}
+
+#nav {
+  padding: 30px;
+
+  a {
+    font-weight: bold;
+    color: #2c3e50;
+
+    &.router-link-exact-active {
+      color: #42b983;
+    }
+  }
 }
 </style>
