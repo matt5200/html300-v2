@@ -3,41 +3,35 @@
      <div class="row">
           <!-- Image with text -->
           <div class="col">
-              <div class="row m-3">
-              <img src="../assets/sky.jpg" class="img-fluid">
+              <div class="row m-3" v-for="image in images" v-bind:key="image">
+                <img :src="image" class="img-fluid">
+                    <div class="row box-1 bg-light">
+                    <p class="font-italic">
+                        {{msg}}
+                    </p>
+                </div>
               </div>
-          </div>
-      </div>
-      <div class="row m-3">
-          <div class="row box-1 bg-light">
-              <p class="font-italic">
-                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt."
-              </p>
-          </div>
-      </div>
-      <div class="row">
-          <!-- Image with text -->
-          <div class="col">
-              <div class="row m-3">
-              <img src="../assets/sky.jpg" class="img-fluid">
-          </div>
-      </div>
-      <div class="row m-3">
-          <div class="row box-1 bg-light">
-              <p class="font-italic">
-                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt."
-              </p>
           </div>
       </div>
       <!-- Footer -->
       <div class="row bg-light text-middle">
           © 2018 Blissful Farms, LLC | Seattle, WA
       </div>
-    </div>
   </div>
 </template>
 
 <script>
+
+export default {
+    name: 'pageData',
+    data () {
+        return {
+            images: ['/img/sky.9e9dee0c.jpg', '/img/sky.9e9dee0c.jpg' ],
+            msg: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt."
+        }
+    }
+}
+
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
