@@ -4,7 +4,7 @@
           <!-- Image with text -->
           <div class="col">
               <div class="row m-3" v-for="image in images" v-bind:key="image">
-                <img :src="image" class="img-fluid">
+                <img v-bind:src="image" class="img-fluid">
                     <div class="row box-1 bg-light">
                     <p class="font-italic">
                         {{msg}}
@@ -26,7 +26,7 @@ export default {
     name: 'pageData',
     data () {
         return {
-            images: ['/img/sky.9e9dee0c.jpg', '/img/sky.9e9dee0c.jpg' ],
+            images: [ require('../assets/sky.jpg'),  require('../assets/sky.jpg') ],
             msg: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt."
         }
     }
