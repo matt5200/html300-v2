@@ -27,11 +27,19 @@
             </div>
           </div>
         </div>
+      </div>
     </div>
+    <!-- Button that when pressed displays an input text for -->
+    <div class="m-3" v-if="show">
+    <button type="button" name="button" v-on:click="show = !show"> Add Your Story</button>
     </div>
-        <!-- Footer -->
-        <div class="row bg-light text-center">
-        © 2018 Blissful Farms, LLC | Seattle, WA
+    <div class="accordion-item" v-else>
+      <button type="button" name="button" v-on:click="show = !show"> Submit </button>
+      <input type="text" id="lname" name="lname"><br><br>
+      </div>
+      <!-- Footer -->
+      <div class="row bg-light text-center">
+      © 2018 Blissful Farms, LLC | Seattle, WA
     </div>
   </div>
 </template>
@@ -49,6 +57,7 @@ export default {
               userTwo: [
               { name: 'Madison\'s story' , text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'}
               ],
+              show: true,
         }
     }
 }
@@ -56,7 +65,10 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
+<style lang="scss">
+button {
+  text-align: center;
+}
 h3 {
   margin: 40px 0 0;
 }
