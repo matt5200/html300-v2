@@ -11,6 +11,7 @@
               <i class="fa fa-tractor"></i>
           </div>
       </div>
+      <!-- Navbar with routes to other pages -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="navbar">
           <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
@@ -39,7 +40,7 @@
 </script>
 
 <style lang="scss">
-
+// Store page content
 $fa-font-path: "~@fortawesome/fontawesome-free/webfonts";
 @import "~@fortawesome/fontawesome-free/scss/fontawesome";
 @import "~@fortawesome/fontawesome-free/scss/solid"; // fas
@@ -60,6 +61,7 @@ $fa-font-path: "~@fortawesome/fontawesome-free/webfonts";
   color: #2c3e50;
 }
 
+// Format nav bar
 #nav {
   padding: 30px;
 
@@ -102,7 +104,5 @@ $fa-font-path: "~@fortawesome/fontawesome-free/webfonts";
 .box-2 {
   border-radius: 20px;
 }
-
-
 
 </style>

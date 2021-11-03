@@ -26,7 +26,7 @@
 </template>
 
 <script>
-
+// Store page content
 export default {
     name: 'pageData',
     data () {
@@ -37,6 +37,4 @@ export default {
         }
     }
 }
-
-
 </script>

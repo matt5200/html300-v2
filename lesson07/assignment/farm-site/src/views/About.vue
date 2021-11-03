@@ -51,6 +51,7 @@
 
 <script>
 
+// Store page content
 export default {
     name: 'pageData',
     data () {
@@ -69,14 +70,11 @@ export default {
         }
     }
 }
-
-
 </script>
 
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss">
-
+// Import font awesome and scss
 $fa-font-path: "~@fortawesome/fontawesome-free/webfonts";
 @import "~@fortawesome/fontawesome-free/scss/fontawesome";
 @import "~@fortawesome/fontawesome-free/scss/solid"; // fas
@@ -88,6 +86,4 @@ $fa-font-path: "~@fortawesome/fontawesome-free/webfonts";
 @import "../../scss/_settings.responsive.scss";
 @import "../../scss/_settings.variables.scss";
 @import "../../scss/style.scss";
-
-
 </style>

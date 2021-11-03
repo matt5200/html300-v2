@@ -21,7 +21,7 @@
 </template>
 
 <script>
-
+// Store page content
 export default {
     name: 'pageData',
     data () {
@@ -31,7 +31,6 @@ export default {
         }
     }
 }
-
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
