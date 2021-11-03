@@ -35,10 +35,6 @@
 </div>
 </template>
 
-<script>
-
-</script>
-
 <style lang="scss">
 // Store page content
 $fa-font-path: "~@fortawesome/fontawesome-free/webfonts";

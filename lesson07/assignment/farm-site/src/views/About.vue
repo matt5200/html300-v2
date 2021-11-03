@@ -50,7 +50,6 @@
 </template>
 
 <script>
-
 // Store page content
 export default {
     name: 'pageData',
