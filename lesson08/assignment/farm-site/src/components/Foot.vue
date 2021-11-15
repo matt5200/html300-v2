@@ -1,6 +1,6 @@
 <template>
   <!-- Footer -->
-  <div class="row bg-light text-middle">
+  <div class="container row bg-light text-middle">
       © 2018 Blissful Farms, LLC | Seattle, WA
   </div>
 </template>
