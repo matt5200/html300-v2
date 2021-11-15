@@ -1,5 +1,5 @@
 <template>
-  <div class="main">
+  <div class="main" id="app">
     <div class="container">
       <!-- Header -->
       <div class="row header">
@@ -31,11 +31,24 @@
           </div>
       </nav>
     <router-view/>
-  </div>
-  <div id="footer">
+    <Foot/>
   </div>
 </div>
 </template>
+
+
+<script>
+
+import Foot from './components/Foot.vue'
+
+export default {
+  name: 'App',
+  components: {
+    Foot
+  }
+}
+
+</script>
 
 <style lang="scss">
 // Store page content
