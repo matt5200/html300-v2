@@ -3,7 +3,8 @@
      <div class="row">
           <!-- Image with text -->
           <div class="col">
-              <Image :source="'../assets/sky.jpg'" :message="'test'" :title="'Beauty'" :desc="'Image of sky'" />
+            <Image :source="'sky.jpg'" :message="'test'" :title="'Beauty'" :desc="'Image of sky'"/>
+            <Image :source="'sky.jpg'" :message="'test'" :title="'Beauty'" :desc="'Image of sky'"/>
           </div>
       </div>
   </div>
@@ -17,7 +18,9 @@ export default {
   name: 'App',
   components: {
     Image
-  }
+  },
+  imageOne: require('../assets/sky.jpg'),
+
 }
 
 </script>
