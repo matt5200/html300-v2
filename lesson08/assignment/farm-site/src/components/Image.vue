@@ -2,8 +2,13 @@
   <div class="container">
      <div class="row">
           <!-- Image with text -->
-          <div class="col">
-              <Image :source="'../assets/sky.jpg'" :message="'test'" :title="'Beauty'" :desc="'Image of sky'" />
+              <div class="row m-3">
+                <img v-bind:alt="desc" v-bind:title="title" v-bind:src="source" class="img-fluid">
+                    <div class="row box-1 bg-light">
+                    <p class="font-italic">
+                        {{message}}
+                    </p>
+              </div>
           </div>
       </div>
   </div>
@@ -11,15 +16,15 @@
 
 <script>
 
-import Image from '../components/Image.vue'
-
+// Store page content
 export default {
-  name: 'App',
-  components: {
-    Image
-  }
+    name: 'Image',
+    props: {source: String,
+            message: String,
+            title: String,
+            desc: String,
+            },
 }
-
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
