@@ -2,8 +2,8 @@
   <div class="container">
      <div class="row">
           <!-- Image with text -->
-              <div class="row m-3">
-                <img v-bind:src="resolve_img_url(source)"  v-bind:alt="desc" v-bind:title="title" class="img-fluid">
+              <div class="padding row">
+                <img @click="onOff" v-bind:src="resolve_img_url(source)"  v-bind:alt="desc" v-bind:title="title" v-bind:class="test">
                     <div class="row box-1 bg-light">
                     <p class="font-italic">
                         {{message}}
@@ -16,26 +16,36 @@
 
 <script>
 
+
+
 // Store page content
 export default {
+    test: 'border border-danger border-5',
     name: 'Image',
-    props: {source: String,
-            message: String,
-            title: String,
-            desc: String,
-            },
+    props: {
+      source: {
+        type: String,
+        required: true, 
+     },
+        message: String,
+        title: String,
+        desc: String,
+    },
     methods: {
       resolve_img_url: function (path) {
       let images = require.context('../assets/', false, /\.png$|\.jpg$/)
       return images("./"+path)
     }
   }
-  //  image: require(this.source)
 }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss">
+
+.padding {
+  padding: 0px;
+}
 
 @import "../../scss/_base.normalize.scss";
 @import "../../scss/_components.content.scss";

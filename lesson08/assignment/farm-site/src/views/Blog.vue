@@ -3,8 +3,8 @@
      <div class="row">
           <!-- Image with text -->
           <div class="col">
-            <Image :source="'sky.jpg'" :message="'test'" :title="'Beauty'" :desc="'Image of sky'"/>
-            <Image :source="'sky.jpg'" :message="'test'" :title="'Beauty'" :desc="'Image of sky'"/>
+            <Image :source="'sky.jpg'" :message="'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.'" :title="'Beauty'" :desc="'Image of sky'"/>
+            <Image :source="'sky.jpg'" :message="'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.'" :title="'Beauty'" :desc="'Image of sky'"/>
           </div>
       </div>
   </div>
@@ -19,8 +19,7 @@ export default {
   components: {
     Image
   },
-  imageOne: require('../assets/sky.jpg'),
-
+  paragraph: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.'
 }
 
 </script>
