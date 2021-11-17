@@ -16,8 +16,6 @@
 
 <script>
 
-
-
 // Store page content
 export default {
     test: 'border border-danger border-5',
