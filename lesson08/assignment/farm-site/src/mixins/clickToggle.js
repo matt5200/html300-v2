@@ -1,14 +1,12 @@
 export default {
-  data: {
-    active: 1
+  data() {
+    return {
+      active: 'border border-danger border-5',
+    }
   },
   methods: {
-     methods: {
-       toggle() {
-         alert('test')
-         this.isActive = !this.isActive;
-         return this.isActive;
-       }
-     }
+    toggle() {
+      return this.active;
+    }
   }
 }
