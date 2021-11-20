@@ -3,7 +3,7 @@
      <div class="row">
           <!-- Image with text -->
               <div class="padding row">
-                <img @click="onOff" v-bind:src="resolve_img_url(source)"  v-bind:alt="desc" v-bind:title="title" v-bind:class="test">
+                <img v-bind:src="resolve_img_url(source)" v-bind:alt="desc" v-bind:title="title"     v-bind:class="toggle()" @click="toggle()">
                     <div class="row box-1 bg-light">
                     <p class="font-italic">
                         {{message}}
@@ -16,8 +16,11 @@
 
 <script>
 
+import clickToggle from '../mixins/clickToggle'
+
 // Store page content
 export default {
+    mixins: [clickToggle],
     test: 'border border-danger border-5',
     name: 'Image',
     props: {
