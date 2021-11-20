@@ -1,3 +1,4 @@
+// Toggle boolean
 export default {
   methods: {
     toggle(bool) {

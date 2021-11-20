@@ -3,6 +3,7 @@
      <div class="row">
           <!-- Image with text -->
               <div class="padding row">
+                <!-- Set image to user values. A border is applied / removed when image is clicked -->
                 <img v-bind:src="resolve_img_url(source)" v-bind:alt="desc" v-bind:title="title" 
                      v-bind:class="{ 'border border-5' : bool}" v-on:click="toggle(this.bool)">
                     <div class="row box-1 bg-light">
@@ -17,6 +18,7 @@
 
 <script>
 
+// Import clickToggle function
 import clickToggle from '../mixins/clickToggle'
 
 let bool = true
@@ -30,7 +32,9 @@ export default {
         bool
       }
     },
+    // Set component props
     props: {
+      // Image source is required
       source: {
         type: String,
         required: true, 
@@ -40,6 +44,7 @@ export default {
         desc: String,
     },
     methods: {
+      // Function to find images
       resolve_img_url: function (path) {
         let images = require.context('../assets/', false, /\.png$|\.jpg$/)
         return images("./"+path)
