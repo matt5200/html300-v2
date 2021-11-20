@@ -4,7 +4,7 @@
           <!-- Image with text -->
               <div class="padding row">
                 <img v-bind:src="resolve_img_url(source)" v-bind:alt="desc" v-bind:title="title" 
-                v-bind:class="toggle()" @click="toggle()">
+                     v-bind:class="{ 'border border-5' : bool}" v-on:click="toggle(this.bool)">
                     <div class="row box-1 bg-light">
                     <p class="font-italic">
                         {{message}}
@@ -19,11 +19,19 @@
 
 import clickToggle from '../mixins/clickToggle'
 
+let test = "border border-5"
+let bool = true
+
 // Store page content
 export default {
     mixins: [clickToggle],
-    test: 'border border-danger border-5',
     name: 'Image',
+    data() {
+      return {
+        bool,
+        test
+      }
+    },
     props: {
       source: {
         type: String,
@@ -35,11 +43,16 @@ export default {
     },
     methods: {
       resolve_img_url: function (path) {
-      let images = require.context('../assets/', false, /\.png$|\.jpg$/)
-      return images("./"+path)
+        let images = require.context('../assets/', false, /\.png$|\.jpg$/)
+        return images("./"+path)
+      },
+      toggle2() {
+        this.bool = !this.bool
+        alert('Val of bool is ' + this.bool)
     }
   }
 }
+
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->

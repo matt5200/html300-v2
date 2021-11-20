@@ -1,12 +1,13 @@
 export default {
-  data() {
-    return {
-      active: 'border border-danger border-5',
-    }
-  },
   methods: {
-    toggle() {
-      return this.active;
+    toggle(bool) {
+      this.bool = !this.bool
+      if (bool === true) {
+        alert('Val of bool is ' + bool)
+        return ''
+      }
+      alert('Val of bool is ' + bool)
+      return 'border border-danger border-5';
     }
   }
 }
