@@ -19,7 +19,6 @@
 
 import clickToggle from '../mixins/clickToggle'
 
-let test = "border border-5"
 let bool = true
 
 // Store page content
@@ -28,8 +27,7 @@ export default {
     name: 'Image',
     data() {
       return {
-        bool,
-        test
+        bool
       }
     },
     props: {
@@ -45,12 +43,8 @@ export default {
       resolve_img_url: function (path) {
         let images = require.context('../assets/', false, /\.png$|\.jpg$/)
         return images("./"+path)
-      },
-      toggle2() {
-        this.bool = !this.bool
-        alert('Val of bool is ' + this.bool)
+      }
     }
-  }
 }
 
 </script>
